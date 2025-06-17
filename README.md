@@ -2,8 +2,6 @@
 
 🚀 A small self-built QA chatbot using **LangChain**, **OpenAI**, and **ChromaDB (FAISS)** — built as part of my personal deep dive into RAG pipelines and LLM-augmented search.
 
-> 🧪 "When I saw LangChain mentioned in an internship JD, I spent a weekend building this chatbot to see how semantic vector search actually worked under the hood."
-
 ---
 
 ## 💡 What it Does
