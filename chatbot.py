@@ -1,11 +1,24 @@
+from langchain.embeddings import OpenAIEmbeddings
+from langchain.vectorstores import Chroma
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.chains import RetrievalQA
+from langchain.llms import OpenAI
+import os, sys
 
-# 1. read local file
+# load docs
 with open("docs/my_doc.txt") as f:
-    text = f.read()
+    raw = f.read()
 
-# 2. split into chunks
 splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
-chunks = splitter.split_text(text)
+docs = splitter.split_text(raw)
 
-print(f"Loaded {len(chunks)} chunks")
+# embed + store
+emb = OpenAIEmbeddings()
+vectordb = Chroma.from_texts(docs, embedding=emb, persist_directory="db")
+retriever = vectordb.as_retriever()
+
+qa = RetrievalQA.from_chain_type(llm=OpenAI(temperature=0.0),
+                                 chain_type="stuff",
+                                 retriever=retriever)
+
+print("Vectorstore ready ✅")
