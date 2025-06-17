@@ -1,0 +1,19 @@
+University College London (UCL) – Research Brief 2025
+
+UCL’s Department of Computer Science is spearheading several initiatives in machine learning, natural‑language processing and responsible AI. 
+Highlights include:
+
+• The UCL Centre for Artificial Intelligence has released a new benchmark for retrieval‑augmented generation that measures factual consistency across 42 domains.
+
+• Researchers at UCL and Moorfields Eye Hospital have developed a computer‑vision pipeline that detects diabetic retinopathy with 92 % accuracy, using self‑supervised pre‑training to reduce labelling costs by 70 %.
+
+• In 2024, UCL partnered with the UK’s National Cyber Security Centre to launch the London Cyber Nexus – a programme that combines LangChain‑style autonomous agents with live threat‑intel streams.  
+  – First results show a 38 % reduction in triage time for phishing incidents.  
+  – The programme also released an open‑source vector‑database plugin based on FAISS and ChromaDB.
+
+Upcoming Challenges (2025–2027)
+1. Aligning large language models to comply with the EU AI Act while preserving open‑source transparency.  
+2. Scaling retrieval pipelines for multi‑modal input (text + images + audio) in low‑resource environments.  
+3. Ethical governance for generative agents that autonomously write or refactor code in production.
+
+Take‑away: UCL is positioning itself as a bridge between cutting‑edge research and real‑world, regulation‑aware deployment in AI and cyber security.
