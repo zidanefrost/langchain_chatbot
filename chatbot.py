@@ -21,4 +21,18 @@ qa = RetrievalQA.from_chain_type(llm=OpenAI(temperature=0.0),
                                  chain_type="stuff",
                                  retriever=retriever)
 
-print("Vectorstore ready ✅")
+print("Vectorstore ready")
+
+if __name__ == "__main__":
+    print("Ask me anything about the document (type 'exit' to quit).")
+    while True:
+        try:
+            q = input("\nYou: ")
+            if q.lower() in {"exit", "quit"}:
+                print("Bye!")
+                sys.exit(0)
+            ans = qa.run(q)
+            print("Bot:", ans)
+        except (KeyboardInterrupt, EOFError):
+            print("\nInterrupted. Bye!")
+            sys.exit(0)
